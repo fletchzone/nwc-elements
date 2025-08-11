@@ -1,0 +1,665 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./components/exp-plugins/exp-text-short/exp-text-short"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./components/exp-plugins/exp-text-long/exp-text-long"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./components/exp-plugins/exp-choice-single/exp-choice-single"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./components/exp-plugins/exp-nforms-elements/exp-nforms-elements"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/utils/events.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "updatePluginValue",
+          "parameters": [
+            {
+              "name": "element",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "name": "data",
+              "type": {
+                "text": "{\n    bubbles?: boolean;\n    cancelable?: boolean;\n    composed?: boolean;\n    detail?: T;\n  }"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "updatePluginValue",
+          "declaration": {
+            "name": "updatePluginValue",
+            "module": "src/utils/events.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/exp-plugins/exp-choice-single/exp-choice-single.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ExpChoiceSingle",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "showAsRadio",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "attribute": "showAsRadio",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "verticalLayout",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "attribute": "verticalLayout",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "labelCssSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "labelCssSelector",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "inputCssSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "inputCssSelector",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "readOnly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "readOnly"
+            },
+            {
+              "kind": "field",
+              "name": "myVariable",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "myVariable",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "getMetaConfig",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "Promise<PluginContract> | PluginContract"
+                }
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "value"
+            },
+            {
+              "name": "showAsRadio",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "fieldName": "showAsRadio"
+            },
+            {
+              "name": "verticalLayout",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "fieldName": "verticalLayout"
+            },
+            {
+              "name": "labelCssSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "labelCssSelector"
+            },
+            {
+              "name": "inputCssSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "inputCssSelector"
+            },
+            {
+              "name": "readOnly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "readOnly"
+            },
+            {
+              "name": "myVariable",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "myVariable"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "form-plugin-exp-choice-single",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ExpChoiceSingle",
+          "declaration": {
+            "name": "ExpChoiceSingle",
+            "module": "src/components/exp-plugins/exp-choice-single/exp-choice-single.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "form-plugin-exp-choice-single",
+          "declaration": {
+            "name": "ExpChoiceSingle",
+            "module": "src/components/exp-plugins/exp-choice-single/exp-choice-single.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/exp-plugins/exp-text-short/exp-text-short.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ExpTextShort",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "labelCssSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "labelCssSelector",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "inputCssSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "inputCssSelector",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "actionCssSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "actionCssSelector",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "readOnly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "readOnly"
+            },
+            {
+              "kind": "method",
+              "name": "getMetaConfig",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "Promise<PluginContract> | PluginContract"
+                }
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "value"
+            },
+            {
+              "name": "labelCssSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "labelCssSelector"
+            },
+            {
+              "name": "inputCssSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "inputCssSelector"
+            },
+            {
+              "name": "actionCssSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "actionCssSelector"
+            },
+            {
+              "name": "readOnly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "readOnly"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "form-plugin-exp-text-short",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ExpTextShort",
+          "declaration": {
+            "name": "ExpTextShort",
+            "module": "src/components/exp-plugins/exp-text-short/exp-text-short.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "form-plugin-exp-text-short",
+          "declaration": {
+            "name": "ExpTextShort",
+            "module": "src/components/exp-plugins/exp-text-short/exp-text-short.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/exp-plugins/exp-nforms-elements/exp-nforms-elements.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ExpNformsElements",
+          "members": [
+            {
+              "kind": "field",
+              "name": "configUrl",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "config-url",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "configGlobalName",
+              "type": {
+                "text": "string"
+              },
+              "default": "'INFLIGHT_CONFIG'",
+              "attribute": "config-global-name",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "nativeUrl",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "nativeUrl",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "title",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "baseDistUrl",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "base-dist-url",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "loadAssetsStyles",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "attribute": "load-assets-styles",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "getMetaConfig",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "Promise<PluginContract> | PluginContract"
+                }
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "config-url",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "configUrl"
+            },
+            {
+              "name": "config-global-name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'INFLIGHT_CONFIG'",
+              "fieldName": "configGlobalName"
+            },
+            {
+              "name": "nativeUrl",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "nativeUrl"
+            },
+            {
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "title"
+            },
+            {
+              "name": "base-dist-url",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "baseDistUrl"
+            },
+            {
+              "name": "load-assets-styles",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "fieldName": "loadAssetsStyles"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "form-plugin-exp-nforms-elements",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ExpNformsElements",
+          "declaration": {
+            "name": "ExpNformsElements",
+            "module": "src/components/exp-plugins/exp-nforms-elements/exp-nforms-elements.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "form-plugin-exp-nforms-elements",
+          "declaration": {
+            "name": "ExpNformsElements",
+            "module": "src/components/exp-plugins/exp-nforms-elements/exp-nforms-elements.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/exp-plugins/exp-text-long/exp-text-long.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ExpTextLong",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "labelCssSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "labelCssSelector",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "inputCssSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "inputCssSelector",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "readOnly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "readOnly"
+            },
+            {
+              "kind": "method",
+              "name": "getMetaConfig",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "Promise<PluginContract> | PluginContract"
+                }
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "value"
+            },
+            {
+              "name": "labelCssSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "labelCssSelector"
+            },
+            {
+              "name": "inputCssSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "inputCssSelector"
+            },
+            {
+              "name": "readOnly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "readOnly"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "form-plugin-exp-text-long",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ExpTextLong",
+          "declaration": {
+            "name": "ExpTextLong",
+            "module": "src/components/exp-plugins/exp-text-long/exp-text-long.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "form-plugin-exp-text-long",
+          "declaration": {
+            "name": "ExpTextLong",
+            "module": "src/components/exp-plugins/exp-text-long/exp-text-long.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

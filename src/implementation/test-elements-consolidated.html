@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular Elements Test</title>
+  
+  <!-- Load Bootstrap CSS first (base styles) -->
+  <link rel="stylesheet" href="./dist/elements-assets/styles.css">
+  
+  <!-- Load theme CSS last (to override Bootstrap) -->
+  <link rel="stylesheet" href="./dist/elements-assets/themes/skuid/theme.css">
+  
+  <!-- Load global JavaScript dependencies -->
+  <script src="./dist/elements-assets/dependencies.js"></script>
+  
+  <!-- Load configuration -->
+  <script src="./src/config/config.general.js"></script>
+</head>
+<body style="padding: 20px;">
+  <h1>Angular Elements Test</h1>
+  
+  <!-- Angular Element -->
+  <nforms-elements 
+    native-url="EMPLOYEE/HRMS/c/EL_EMPLOYEE_FL.HR_EE_ADDR_FL.GBL?TILE=Y"
+    title="Address Change Form">
+  </nforms-elements>
+  
+  <!-- Load Angular Elements bundles -->
+  <script src="./dist/elements/runtime.js"></script>
+  <script src="./dist/elements/polyfills.js"></script>
+  <script src="./dist/elements/main.js"></script>
+</body>
+</html>
