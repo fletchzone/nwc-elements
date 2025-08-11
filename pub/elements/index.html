@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Employee and Manager Self Service</title>
+  <base href="/app/ui/">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+  <link rel="stylesheet" href="assets/images/icons/css/style.css?rev=0">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1976d2">
+  <style>
+    .if-cloak {
+      opacity: 0;
+    }
+
+    body {
+      transition: opacity 1s ease-in;
+    }
+  </style>
+
+<script>
+  var cvh = new URL(window.location.href).host.split(".");
+  document.domain=cvh[cvh.length-2] + "." + cvh[cvh.length-1].split(":")[0];
+</script>
+
+<link rel="stylesheet" href="styles.css"></head>
+
+<body class="if-cloak">
+  <app-root><ui-loading [active]="loading"></ui-loading></app-root>
+  <script src="config/config.general.js?rev=0"></script>
+  <script src="config/config.user-apps.js?rev=0"></script>
+  <script src="config/config.theme.js?rev=0"></script>
+  <script src="config/config.trc-mapping.js"></script>
+  <script type="text/javascript" src="https://static.cdn.prismic.io/prismic.min.js?new=true"></script>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+
+<script src="runtime.js" type="module"></script><script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script></body>
+
+</html>
